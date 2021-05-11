@@ -1,0 +1,4 @@
+{
+    "companyInfoEndpoint": "https://api.spacexdata.com/v3/info",
+    "allLaunchesEndpoint": "https://api.spacexdata.com/v3/launches"
+}
