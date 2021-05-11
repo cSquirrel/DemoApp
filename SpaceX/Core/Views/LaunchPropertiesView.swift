@@ -38,5 +38,7 @@ struct LaunchPropertiesView_Previews: PreviewProvider {
             LaunchModel.Property(label: "Rocket:", value: "Falcon 9 / FT"),
             LaunchModel.Property(label: "Days since now:", value: "-197"),
            ])
+        .padding()
+        .border(Color.black)
     }
 }

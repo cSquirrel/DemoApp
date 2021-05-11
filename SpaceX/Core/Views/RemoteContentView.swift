@@ -40,3 +40,33 @@ struct RemoteContentView<Content: View, Value: Any>: View {
         }
     }
 }
+
+struct RemoteContentView_Previews: PreviewProvider {
+
+    @State static var loadedState = ContentState<String>.loaded("Loaded Value")
+    @State static var errorState = ContentState<String>.error(DataSourceError.generalError)
+    @State static var emptyState = ContentState<String>.empty
+
+    static var previews: some View {
+        VStack(spacing: 24) {
+            
+            RemoteContentView<Text, String>(state: $loadedState) { value in
+                Text("Loaded Value: \(value)")
+            }
+            .padding()
+            .border(Color.black)
+            
+            RemoteContentView<Text, String>(state: $errorState) { _ in
+                Text("")
+            }
+            .padding()
+            .border(Color.black)
+
+            RemoteContentView<Text, String>(state: $emptyState) { _ in
+                Text("")
+            }
+            .padding()
+            .border(Color.black)
+        }
+    }
+}

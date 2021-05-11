@@ -29,9 +29,14 @@ struct LaunchStatusView: View {
 
 struct LaunchStatusView_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
+        HStack {
             LaunchStatusView(launchStatus: true)
+                .padding()
+                .border(Color.black)
+            
             LaunchStatusView(launchStatus: false)
+                .padding()
+                .border(Color.black)
         }
     }
 }

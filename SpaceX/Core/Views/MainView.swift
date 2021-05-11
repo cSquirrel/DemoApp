@@ -235,11 +235,3 @@ struct MainView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//
-//    static let dataSource = RemoteDataSource()
-//
-//    static var previews: some View {
-//        ContentView(dataSource: dataSource)
-//    }
-//}
